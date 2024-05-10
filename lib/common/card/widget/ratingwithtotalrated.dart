@@ -15,6 +15,7 @@ class RatingwithTotalrates extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      
       children: [
         RatingBar.builder(
           initialRating: rate,
