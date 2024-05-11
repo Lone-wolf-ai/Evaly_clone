@@ -1,9 +1,13 @@
 import 'package:evaly/common/button/customelevatedbutton.dart';
+import 'package:evaly/common/card/cardlogobanner.dart';
+import 'package:evaly/common/card/productcard.dart';
+import 'package:evaly/common/card/productcardwithtag.dart';
 import 'package:evaly/common/card/shopcard.dart';
 import 'package:evaly/common/card/widget/productprice.dart';
 import 'package:evaly/common/card/widget/producttitle.dart';
 import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
+import 'package:evaly/common/image/roundedimg.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/feature/screens/shop/account/accountscreen.dart';
 import 'package:flutter/cupertino.dart';
@@ -38,15 +42,11 @@ class TestPage extends StatelessWidget {
       body: Center(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: const Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Column(
-                children: [
-                 
-                ],
-              )
+              ProductCardWithTag(),
             ],
           ),
         ),
@@ -54,13 +54,6 @@ class TestPage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
 
 
 

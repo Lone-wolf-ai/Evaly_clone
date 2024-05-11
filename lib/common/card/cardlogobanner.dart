@@ -2,6 +2,7 @@ import 'package:evaly/common/card/cardwithattributes.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/image/bannerimg.dart';
 import 'package:evaly/constant/imageconstant.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -50,39 +51,8 @@ class CardLogoBaner extends StatelessWidget {
               top: 150,
               child: Column(
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Stack(
-                        children: [
-                          Icon(
-                            Icons.shield,
-                            size: 13,
-                            color: Vx.blue600,
-                          ),
-                          Positioned(
-                            top: 0,
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
-                            child: Icon(
-                              Icons.check,
-                              size: 10,
-                              color: Vx.white,
-                            ),
-                          ),
-                        ],
-                      ).paddingOnly(left: 4, top: 5),
-                      3.widthBox,
-                      Flexible(
-                        child: Row(
-                          children: [
-                            Expanded(
-                                child: title.text.semiBold.size(15).make()),
-                          ],
-                        ),
-                      ),
-                    ],
+                  MultilineTitlewithverification(
+                    title: title,
                   ),
                   RatingwithTotalrates(rate: ratings, totalrated: totalrated)
                       .paddingOnly(left: 4)
@@ -128,6 +98,65 @@ class CardLogoBaner extends StatelessWidget {
             )
           ],
         ).box.height(260).white.roundedSM.make(),
+      ],
+    );
+  }
+}
+
+class MultilineTitlewithverification extends StatelessWidget {
+  const MultilineTitlewithverification({
+    super.key,
+    required this.title,
+    this.size = 15,
+    this.isboled = true,
+  });
+
+  final String title;
+  final double size;
+  final bool isboled;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Stack(
+              children: [
+                Icon(
+                  Icons.shield,
+                  size: 13,
+                  color: Vx.blue600,
+                ),
+                Positioned(
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Icon(
+                    Icons.check,
+                    size: 10,
+                    color: Vx.white,
+                  ),
+                ),
+              ],
+            ).paddingOnly(left: 4, top: 5),
+            3.widthBox,
+            Flexible(
+              child: Row(
+                children: [
+                  Expanded(
+                      child: title.text
+                          .fontWeight(
+                              isboled ? FontWeight.bold : FontWeight.normal)
+                          .size(size)
+                          .make()),
+                ],
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

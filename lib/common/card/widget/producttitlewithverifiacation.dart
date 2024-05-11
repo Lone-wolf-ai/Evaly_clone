@@ -1,4 +1,5 @@
 import 'package:evaly/common/card/widget/producttitle.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -7,10 +8,12 @@ class ProducttitlewithVerification extends StatelessWidget {
     super.key,
     required this.title,
     this.isverified = true,
+    this.isSemibold=true
   });
 
   final String title;
   final bool isverified;
+  final bool isSemibold;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +44,7 @@ class ProducttitlewithVerification extends StatelessWidget {
         2.widthBox,
         Producttitle(
           title: title,
+          isSemibold: isSemibold,
         ),
       ],
     );
