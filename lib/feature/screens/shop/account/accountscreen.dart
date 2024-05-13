@@ -1,9 +1,7 @@
 import 'package:evaly/common/button/circulariconbutton.dart';
 import 'package:evaly/common/text/titletext.dart';
 import 'package:evaly/constant/imageconstant.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AccountScreen extends StatelessWidget {

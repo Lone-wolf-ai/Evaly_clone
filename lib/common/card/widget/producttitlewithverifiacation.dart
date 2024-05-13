@@ -1,5 +1,4 @@
 import 'package:evaly/common/card/widget/producttitle.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

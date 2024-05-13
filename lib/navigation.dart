@@ -1,3 +1,4 @@
+import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -10,34 +11,35 @@ class NavigationBarMenue extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
     return Scaffold(
-      bottomNavigationBar: Obx(
-        () => NavigationBar(
-          height: 80,
-          elevation: 0,
-          selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (value) => controller.selectedIndex.value = value,
-          backgroundColor: Colors.white,
-          indicatorColor: Vx.white,
-          destinations: List.generate(
-            4, 
-            (index) => _buildNavigationDestination(
-              index,
-              controller.selectedIndex.value == index, 
-            ),
-          ),
-        ),
-      ),
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
+      bottomNavigationBar: Obx(
+        () => ClipRRect(
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(20.0)), // Adjust radius as needed
+          child: NavigationBar(
+            height: 80,
+            elevation: 0,
+            selectedIndex: controller.selectedIndex.value,
+            onDestinationSelected: (value) => controller.selectedIndex.value = value,
+            backgroundColor: Colors.white,
+            indicatorColor: Vx.white,
+            destinations: List.generate(
+              4,
+              (index) => _buildNavigationDestination(index, controller.selectedIndex.value == index),
+            ),
+            // Optional: Add slight bottom padding for content adjustment
+            // padding: const EdgeInsets.only(bottom: 8.0),
+          ),
+        ).box.shadowSm.rounded.make(),
+      ),
     );
   }
 
   Widget _buildNavigationDestination(int index, bool isSelected) {
-    final icon = _getIcon(index); 
+    final icon = _getIcon(index);
 
     return NavigationDestination(
-      icon: isSelected ? Icon(icon, color: Colors.black) : Icon(icon,color: Vx.gray500,), 
+      icon: isSelected ? Icon(icon, color: Colors.black) : Icon(icon, color: Vx.gray500),
       label: _getLabel(index),
-       
     );
   }
 
@@ -75,7 +77,7 @@ class NavigationBarMenue extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
-    Container(), 
+    ShoppingCart(), // Replace with your actual screens
     Container(),
     Container(),
     Container(),

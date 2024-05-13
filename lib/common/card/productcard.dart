@@ -2,7 +2,6 @@ import 'package:evaly/common/card/widget/productavailabilty.dart';
 import 'package:evaly/common/card/widget/productprice.dart';
 import 'package:evaly/common/card/widget/productsubtitle.dart';
 import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
-import 'package:evaly/constant/imageconstant.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

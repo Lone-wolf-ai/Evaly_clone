@@ -5,9 +5,6 @@ import 'package:evaly/constant/stringconstant.dart';
 import 'package:evaly/feature/controller/auth/infoprovide/infoprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CompleteProfileScreen extends StatelessWidget {
@@ -17,7 +14,7 @@ class CompleteProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(InfoPorvideController());
 
-//function for select date and assign to controller
+    //function for select date and assign to controller
     void _handleDateSelection(BuildContext context) async {
       // Handle date picker and update text field
       final selectedDate = await showDatePicker(
