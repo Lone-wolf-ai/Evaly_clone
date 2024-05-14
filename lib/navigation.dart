@@ -1,3 +1,5 @@
+import 'package:evaly/feature/screens/shop/account/accountscreen.dart';
+import 'package:evaly/feature/screens/shop/cart/cartscreen.dart';
 import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -77,9 +79,10 @@ class NavigationBarMenue extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
-    ShoppingCart(), // Replace with your actual screens
+     // Replace with your actual screens
     Container(),
     Container(),
-    Container(),
+    const ShoppingCart(),
+    const AccountScreen(),
   ];
 }

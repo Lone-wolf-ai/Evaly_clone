@@ -29,6 +29,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         (isnetworkimg)
             ? Image(
@@ -39,13 +40,13 @@ class ProductCard extends StatelessWidget {
               )
                 .box
                 .color(Vx.white)
-                .height(140)
-                .width(120)
+                .height(100)
+                .width(100)
                 .p1 // Padding of 1 on all sides (optional)
                 .roundedSM // Rounded corners (optional)
                 .make(),
         Padding(
-          padding: const EdgeInsets.all(6.0),
+          padding: const EdgeInsets.symmetric(horizontal: 6),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -67,6 +68,12 @@ class ProductCard extends StatelessWidget {
           ).box.height(100).make(),
         ),
       ],
-    ).box.width(120).roundedSM.color(Vx.white).make();
+    )
+        .box
+        .width(120)
+        .margin(const EdgeInsets.symmetric(vertical: 16))
+        .roundedSM
+        .color(Vx.white)
+        .make();
   }
 }

@@ -14,7 +14,7 @@ class ProductAbleabilty extends StatelessWidget {
         .size(12)
         .make()
         .centered()
-        .box
+        .box.p0
         .rounded
         .width(double.infinity)
         .linearGradient(linearcolors)
