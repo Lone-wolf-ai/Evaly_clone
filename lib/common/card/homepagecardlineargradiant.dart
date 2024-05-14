@@ -1,4 +1,5 @@
 import 'package:evaly/common/button/showbutton.dart';
+import 'package:evaly/common/card/homepagecard.dart';
 import 'package:evaly/common/card/productcard.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:flutter/material.dart';
@@ -37,30 +38,17 @@ class HomePageCardLinearGradiant extends StatelessWidget {
             )
           ],
         ),
-        ListView.separated(
-                shrinkWrap: true,
-                cacheExtent: 20,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => const ProductCard(
-                    title: 'hello',
-                    subtitle: 'bye',
-                    amount: '20',
-                    reduced: true,
-                    newprice: '1000',
-                    price: '1700',
-                    imgurl: ImageCons.watch1,
-                    isnetworkimg: false),
-                separatorBuilder: (_, __) => 10.widthBox,
-                itemCount: 10)
-            .box
-            .height(240)
-            .make()
+        10.heightBox,
+        const ProductCardList(
+          autoscroll: false,
+        )
       ],
     )
         .box
         .linearGradient(lineracolor!,
             begin: Alignment.topLeft, end: Alignment.bottomRight)
-        .padding(const EdgeInsets.only(left: 10, right: 10, top: 10))
+        .padding(
+            const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10))
         .rounded
         .make();
   }

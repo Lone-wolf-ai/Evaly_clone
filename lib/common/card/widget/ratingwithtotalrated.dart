@@ -7,11 +7,12 @@ class RatingwithTotalrates extends StatelessWidget {
     super.key,
     required this.rate,
     required this.totalrated,
+    this.itemsize=14
   });
 
   final double rate;
   final String totalrated;
-
+  final double itemsize;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,12 +21,13 @@ class RatingwithTotalrates extends StatelessWidget {
         RatingBar.builder(
           initialRating: rate,
           allowHalfRating: true,
-          itemSize: 14,
+          itemSize: itemsize,
           maxRating: 5,
           minRating: 1,
           itemBuilder: (_, index) => const Icon(
             Icons.star,
             color: Colors.amber,
+            
           ),
           onRatingUpdate: (double value) {},
         ),

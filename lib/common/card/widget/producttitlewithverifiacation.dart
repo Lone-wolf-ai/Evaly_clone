@@ -24,7 +24,7 @@ class ProducttitlewithVerification extends StatelessWidget {
             children: [
               Icon(
                 Icons.shield,
-                size: 13,
+                size: 12,
                 color: Vx.blue600,
               ),
               Positioned(
@@ -34,7 +34,7 @@ class ProducttitlewithVerification extends StatelessWidget {
                 right: 0,
                 child: Icon(
                   Icons.check,
-                  size: 10,
+                  size: 8,
                   color: Vx.white,
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:evaly/feature/screens/shop/account/accountscreen.dart';
 import 'package:evaly/feature/screens/shop/cart/cartscreen.dart';
+import 'package:evaly/feature/screens/shop/home/homescreen.dart';
 import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -80,7 +81,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
      // Replace with your actual screens
-    Container(),
+    const HomeScreen(),
     Container(),
     const ShoppingCart(),
     const AccountScreen(),

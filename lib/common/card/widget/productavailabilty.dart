@@ -11,10 +11,10 @@ class ProductAbleabilty extends StatelessWidget {
     return "Only $amount Pcs"
         .text
         .white
-        .size(12)
+        .sm.size(8)
         .make()
         .centered()
-        .box.p0
+        .box
         .rounded
         .width(double.infinity)
         .linearGradient(linearcolors)

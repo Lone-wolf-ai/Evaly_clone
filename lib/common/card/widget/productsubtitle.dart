@@ -9,6 +9,6 @@ class ProductSubtitle extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return Flexible(child: title.text.ellipsis.size(13).maxLines(1).make());
+    return Flexible(child: title.text.ellipsis.size(12).maxLines(1).make());
   }
 }

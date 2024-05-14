@@ -17,11 +17,11 @@ class ProducPrice extends StatelessWidget {
               "৳ $price"
                   .text
                   .lineThrough
-                  .fontWeight(FontWeight.w500)
-                  .size(12)
+                  .sm
+                  .size(8).semiBold
                   .gray500
                   .make(),
-              "৳ $newprice".text.bold.orange600.make()
+              "৳ $newprice".text.semiBold.medium.orange600.make()
             ],
           );
   }

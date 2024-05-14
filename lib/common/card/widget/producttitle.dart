@@ -15,7 +15,7 @@ class Producttitle extends StatelessWidget {
         child: title.text
             .fontWeight(isSemibold ? FontWeight.w500 : FontWeight.normal)
             .ellipsis
-            .size(14)
+            .size(12)
             .maxLines(1)
             .make());
   }

@@ -1,11 +1,8 @@
-import 'package:evaly/common/button/showbutton.dart';
 import 'package:evaly/common/card/homepagecard.dart';
 import 'package:evaly/common/card/homepagecardlineargradiant.dart';
-import 'package:evaly/common/card/productcard.dart';
 import 'package:evaly/constant/colorconstant.dart';
-import 'package:evaly/constant/imageconstant.dart';
+import 'package:evaly/navigation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -19,8 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-      // Customize theme (optional)
-      home: TestPage(), // Replace with your main screen widget
+      debugShowCheckedModeBanner: false,
+      
+      home: NavigationBarMenue(), 
     );
   }
 }
@@ -44,7 +42,7 @@ class TestPage extends StatelessWidget {
             ),
             10.heightBox,
             const HomePageCard(title: 'Deals of The Day',
-              subtitle: 'Best of Prices,Top Products',color: Colors.red,)
+              subtitle: 'Best of Prices,Top Products',color:Vx.red200,)
           ],
         ),
       ),

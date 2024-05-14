@@ -2,6 +2,7 @@ import 'package:evaly/common/card/widget/productavailabilty.dart';
 import 'package:evaly/common/card/widget/productprice.dart';
 import 'package:evaly/common/card/widget/productsubtitle.dart';
 import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
+import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -15,8 +16,10 @@ class ProductCard extends StatelessWidget {
       this.newprice,
       required this.imgurl,
       required this.isnetworkimg,
+      this.isSemibold = true,
       this.reduced = false,
-      this.isverified = true});
+      this.isverified = true,
+      this.applyrating = false});
   final String title;
   final String subtitle;
   final String amount;
@@ -26,54 +29,58 @@ class ProductCard extends StatelessWidget {
   final bool isnetworkimg;
   final bool reduced;
   final bool isverified;
+  final bool isSemibold;
+  final bool applyrating;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        (isnetworkimg)
-            ? Image(
-                image: NetworkImage(imgurl),
-              )
-            : Image(
-                image: AssetImage(imgurl),
-              )
-                .box
-                .color(Vx.white)
-                .height(100)
-                .width(100)
-                .p1 // Padding of 1 on all sides (optional)
-                .roundedSM // Rounded corners (optional)
-                .make(),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 6),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ProducttitlewithVerification(
-                title: title,
-                isverified: isverified,
-              ),
-              ProductSubtitle(title: subtitle),
-              2.heightBox,
-              ProducPrice(
-                price: price,
-                newprice: newprice,
-                reduced: reduced,
-              ),
-              4.heightBox,
-              ProductAbleabilty(amount: amount),
-              2.heightBox,
-            ],
-          ).box.height(100).make(),
-        ),
-      ],
-    )
-        .box
-        .width(120)
-        .margin(const EdgeInsets.symmetric(vertical: 16))
-        .roundedSM
-        .color(Vx.white)
-        .make();
+    return Container(
+      height: 80,
+      width: 100,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), color: Vx.white),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          (isnetworkimg)
+              ? Image(
+                  image: NetworkImage(imgurl),
+                )
+              : Image(
+                  image: AssetImage(
+                    imgurl,
+                  ),
+                  height: 80,
+                  width: 80,
+                  fit: BoxFit.contain,
+                ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ProducttitlewithVerification(
+                  title: title,
+                  isverified: isverified,
+                  isSemibold: isSemibold,
+                ),
+                ProductSubtitle(title: subtitle),
+                1.heightBox,
+                ProducPrice(
+                  price: price,
+                  newprice: newprice,
+                  reduced: reduced,
+                ),
+                2.heightBox,
+                (applyrating)
+                    ? const RatingwithTotalrates(rate: 4, totalrated: "20k",itemsize: 10,)
+                    : ProductAbleabilty(amount: amount),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

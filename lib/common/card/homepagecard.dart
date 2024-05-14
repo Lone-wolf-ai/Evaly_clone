@@ -1,6 +1,7 @@
 import 'package:evaly/common/button/showbutton.dart';
 import 'package:evaly/common/card/productcard.dart';
 import 'package:evaly/constant/imageconstant.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -15,6 +16,8 @@ class HomePageCard extends StatelessWidget {
     this.textcolor = Vx.black,
     this.autoscroll = false,
     this.showall = true,
+    this.applyrating = false,
+    this.isSemibold=false
   });
 
   final String title;
@@ -24,11 +27,10 @@ class HomePageCard extends StatelessWidget {
   final Color textcolor;
   final bool autoscroll;
   final bool showall;
-
+  final bool applyrating;
+  final bool isSemibold;
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ScrollControllerManager()); // Get the controller
-    controller.autoscroll.value = autoscroll;
     return Column(
       children: [
         Row(
@@ -36,7 +38,6 @@ class HomePageCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 title.text.color(textcolor).bold.size(18).make(),
@@ -49,33 +50,61 @@ class HomePageCard extends StatelessWidget {
             if (showall) ShowAllButton(ontap: onTap),
           ],
         ),
-        ListView.separated(
-          shrinkWrap: true,
-          controller:
-              controller._scrollController, // Conditionally assign controller
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          scrollDirection: Axis.horizontal,
-          cacheExtent: 10,
-          itemBuilder: (context, index) => const ProductCard(
-            title: 'hello',
-            subtitle: 'bye',
-            amount: '20',
-            reduced: true,
-            newprice: '1000',
-            price: '1700',
-            imgurl: ImageCons.watch1,
-            isnetworkimg: false,
-          ),
-          separatorBuilder: (_, __) => 10.widthBox,
-          itemCount: 10,
-        ).box.height(240).make(),
+        10.heightBox,
+         ProductCardList(
+          autoscroll: autoscroll,
+          isSemibold:isSemibold ,
+          applyrating:applyrating,
+        ),
       ],
     )
         .box
         .color(color)
-        .padding(const EdgeInsets.only(left: 10, right: 10, top: 10))
+        .padding(
+            const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10))
         .rounded
+        .make()
+        .box
         .make();
+  }
+}
+
+class ProductCardList extends StatelessWidget {
+  const ProductCardList({
+    super.key,
+    required this.autoscroll,
+    this.isSemibold = false,
+    this.applyrating = false,
+  });
+  final bool autoscroll;
+  final bool isSemibold;
+  final bool applyrating;
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(ScrollControllerManager()); // Get the controller
+    controller.autoscroll.value = autoscroll;
+    return ListView.separated(
+      shrinkWrap: true,
+      controller:
+          controller._scrollController, // Conditionally assign controller
+      clipBehavior: Clip.antiAliasWithSaveLayer,
+      scrollDirection: Axis.horizontal,
+      cacheExtent: 10,
+      itemBuilder: (context, index) => ProductCard(
+        applyrating: applyrating,
+        isSemibold: isSemibold,
+        title: 'hello',
+        subtitle: 'bye',
+        amount: '20',
+        reduced: true,
+        newprice: '1000',
+        price: '1700',
+        imgurl: ImageCons.watch1,
+        isnetworkimg: false,
+      ),
+      separatorBuilder: (_, __) => 10.widthBox,
+      itemCount: 10,
+    ).box.height(180).make();
   }
 }
 

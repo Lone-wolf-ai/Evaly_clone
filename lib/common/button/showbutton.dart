@@ -12,15 +12,15 @@ class ShowAllButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        "Show All".text.make(),
+        "Show All".text.sm.make(),
         const Icon(
           Icons.arrow_forward_ios,
-          size: 16,
+          size: 12,
         )
       ],
     )
         .box
-        .padding(const EdgeInsets.symmetric(horizontal: 10, vertical: 4))
+        .padding(const EdgeInsets.symmetric(horizontal: 8, vertical: 2))
         .rounded
         .white
         .make()
