@@ -15,7 +15,7 @@ class CompleteProfileScreen extends StatelessWidget {
     final controller = Get.put(InfoPorvideController());
 
     //function for select date and assign to controller
-    void _handleDateSelection(BuildContext context) async {
+    void handleDateSelection(BuildContext context) async {
       // Handle date picker and update text field
       final selectedDate = await showDatePicker(
         context: context,
@@ -98,7 +98,7 @@ class CompleteProfileScreen extends StatelessWidget {
                 controller: controller.date,
                 title: StringCons.enterYourDateOfBirth,
                 prefixIcon: Icons.edit_calendar,
-                prefixfun: () => _handleDateSelection(context),
+                prefixfun: () => handleDateSelection(context),
               ),
               const SizedBox(height: 16.0),
               //complete button 

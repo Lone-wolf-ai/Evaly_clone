@@ -1,7 +1,6 @@
 import 'package:evaly/common/text/titletext.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/feature/screens/shop/cart/widget/bottomtitle.dart';
-import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 

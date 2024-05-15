@@ -2,7 +2,6 @@ import 'package:evaly/common/card/cardwithattributes.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/image/bannerimg.dart';
 import 'package:evaly/constant/imageconstant.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

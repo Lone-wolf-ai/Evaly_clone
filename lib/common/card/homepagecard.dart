@@ -1,7 +1,6 @@
 import 'package:evaly/common/button/showbutton.dart';
 import 'package:evaly/common/card/productcard.dart';
 import 'package:evaly/constant/imageconstant.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
