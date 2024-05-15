@@ -1,18 +1,21 @@
 import 'package:evaly/feature/screens/shop/home/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
 
-AppBar homeAppBar() {
-    return AppBar(
-      surfaceTintColor: Colors.white,
-      title: const RoundedSearchBar(),
-      leading: IconButton(
-        icon: const Icon(Icons.menu),
+
+final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>(); 
+AppBar homeAppBar() { // Pass the Scaffold key
+  return AppBar(
+    surfaceTintColor: Colors.white,
+    title: const RoundedSearchBar(),
+    leading: IconButton(
+      icon: const Icon(Icons.menu),
+      onPressed: () => scaffoldKey.currentState!.openDrawer(),
+    ),
+    actions: [
+      IconButton(
         onPressed: () {},
+        icon: const Icon(Icons.notifications_none_outlined),
       ),
-      actions: [
-        IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.notifications_none_outlined))
-      ],
-    );
-  }
+    ],
+  );
+}

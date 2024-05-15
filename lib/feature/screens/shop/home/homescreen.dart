@@ -1,14 +1,8 @@
-import 'package:evaly/common/card/homepagecard.dart';
-import 'package:evaly/common/card/homepagecardlineargradiant.dart';
 import 'package:evaly/common/card/productcardwithtag.dart';
-import 'package:evaly/constant/colorconstant.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/appbar.dart';
-import 'package:evaly/feature/screens/shop/home/widgets/companycardlist.dart';
-import 'package:evaly/feature/screens/shop/home/widgets/homebannercard.dart';
-import 'package:evaly/feature/screens/shop/home/widgets/homebuttons.dart';
+import 'package:evaly/feature/screens/shop/home/widgets/drawer.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/part1.dart';
-import 'package:evaly/feature/screens/shop/home/widgets/searchbar.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/shopcardlisttitle.dart';
 import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
@@ -21,11 +15,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       appBar: homeAppBar(),
+      drawer:const MyDrawer(userName: "Joy", userEmail: "TanjimJOy7@gmail.com") ,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            BannerCarousel(imagePaths:[
+            const BannerCarousel(imagePaths:[
               ImageCons.banner1,
               ImageCons.banner1,
               ImageCons.banner1
@@ -35,7 +31,7 @@ class HomeScreen extends StatelessWidget {
               child: Part1(),
             ),
             10.heightBox,
-            Part2(),
+            const Part2(),
           ],
         ),
       ),
