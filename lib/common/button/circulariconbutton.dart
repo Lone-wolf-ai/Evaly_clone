@@ -4,7 +4,7 @@ import 'package:velocity_x/velocity_x.dart';
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({
     super.key,
-    this.backgroundColor = Vx.gray200,
+    this.backgroundColor = Vx.gray100,
     this.iconcolor = Vx.white,
     required this.icon,
     this.onPressed,  this.size=22,  this.minimumSize,
