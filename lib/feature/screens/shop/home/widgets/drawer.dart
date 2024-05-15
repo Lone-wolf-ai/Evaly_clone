@@ -1,3 +1,4 @@
+import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/feature/screens/shop/account/accountscreen.dart';
 import 'package:evaly/feature/screens/shop/cart/cartscreen.dart';
 import 'package:evaly/feature/screens/shop/home/homescreen.dart';
@@ -32,9 +33,8 @@ class MyDrawer extends StatelessWidget {
                 const SizedBox(height: 20.0), // Adjust top padding as needed
                 const CircleAvatar(
                   radius: 40.0,
-                  backgroundImage: NetworkImage(
-                    "https://placeimg.com/640/480/people", // Replace with your image URL
-                  ),
+                  backgroundColor: Vx.gray300,
+                  backgroundImage: AssetImage(ImageCons.person)
                 ),
                 const SizedBox(height: 16.0),
                 Text(

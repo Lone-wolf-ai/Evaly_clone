@@ -1,5 +1,6 @@
 import 'package:evaly/common/card/homepagecard.dart';
 import 'package:evaly/common/card/homepagecardlineargradiant.dart';
+import 'package:evaly/common/card/shopcard.dart';
 import 'package:evaly/constant/colorconstant.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/navigation.dart';
@@ -16,47 +17,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    // Provide TickerProvider before building the app
+
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: NavigationBarMenue(),
     );
   }
 }
 
-class TestPage extends StatelessWidget {
-  const TestPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            BannerCarousel(imagePaths: [
-              ImageCons.banner1,
-              ImageCons.banner1,
-              ImageCons.banner1
-            ]),
-            const HomePageCardLinearGradiant(
-              title: 'Deals of The Day',
-              subtitle: 'Best of Prices,Top Products',
-              lineracolor: [ColorConstant.sky, ColorConstant.parrot],
-            ),
-            10.heightBox,
-            const HomePageCard(
-              title: 'Deals of The Day',
-              subtitle: 'Best of Prices,Top Products',
-              color: Vx.red200,
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
+
 
 class BannerCarousel extends StatefulWidget {
   final List<String> imagePaths;

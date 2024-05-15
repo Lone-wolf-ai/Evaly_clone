@@ -1,7 +1,9 @@
 import 'package:evaly/common/button/circulariconbutton.dart';
 import 'package:evaly/common/text/titletext.dart';
 import 'package:evaly/constant/imageconstant.dart';
+import 'package:evaly/feature/screens/shop/account/widget/wishlist.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -78,7 +80,7 @@ class FourTitlesWithIcons extends StatelessWidget {
           IconListTitle(
             title: "Wishlist",
             icon: Icons.favorite_border_outlined,
-            ontap: () {},
+            ontap: () =>Get.to(()=> const Wishlist()),
             color: Vx.red500,
           ),
           10.heightBox,

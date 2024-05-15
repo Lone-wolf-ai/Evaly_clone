@@ -54,6 +54,7 @@ dependencies:
   firebase_auth: ^4.19.4
   cloud_firestore: ^4.17.3
   firebase_app_check: ^0.2.2+5
+  giphy_picker: ^3.0.2
 
 dev_dependencies:
   flutter_test:
