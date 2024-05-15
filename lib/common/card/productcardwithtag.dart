@@ -3,47 +3,59 @@ import 'package:evaly/common/card/widget/productprice.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/image/productimgwithtag.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ProductCardWithTag extends StatelessWidget {
-  const ProductCardWithTag({
-    super.key,
-  });
+  const ProductCardWithTag({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const ProductimgWithTag(),
-        5.heightBox,
-        const MultilineTitlewithverification(
-          title: 'hello its me',
-          size: 14,
-          isboled: false,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            10.heightBox,
-            const ProducPrice(
+    return Container(
+      width: 100.0, // Adjust width as needed
+      height: 400.0, // Adjust height as needed
+      decoration: BoxDecoration(
+        color: Vx.white,
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const ProductimgWithTag(),
+          const SizedBox(height: 5.0), // Adjust spacing as needed
+          const MultilineTitlewithverification(
+            title: 'hello its me',
+            size: 14.0,
+            isboled: false,
+          ),
+          const SizedBox(height: 10.0), // Adjust spacing as needed
+          const Padding(
+            padding: EdgeInsets.only(left: 8.0),
+            child: ProducPrice(
               price: '5000',
               reduced: true,
               newprice: '1000',
             ),
-          ],
-        ).paddingOnly(left: 8),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            5.heightBox,
-            "In Stock".text.gray500.sm.make(),
-            const RatingwithTotalrates(rate: 4, totalrated: '20')
-          ],
-        ).paddingOnly(left: 8),
-        5.heightBox
-      ],
-    ).box.width(160).white.roundedSM.make();
+          ),
+          // Adjust spacing as needed
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "In Stock",
+                  style: TextStyle(color: Colors.grey[500], fontSize: 12.0),
+                ),
+                const SizedBox(width: 5.0), // Adjust spacing as needed
+                const RatingwithTotalrates(rate: 4, totalrated: '20'),
+              ],
+            ),
+          ),
+          const SizedBox(height: 5.0), // Adjust spacing as needed
+        ],
+      ),
+    );
   }
 }

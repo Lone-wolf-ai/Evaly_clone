@@ -2,8 +2,8 @@ import 'package:evaly/common/card/widget/producttitle.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class ProducttitlewithVerification extends StatelessWidget {
-  const ProducttitlewithVerification({
+class ShoptitlewithVerification extends StatelessWidget {
+  const ShoptitlewithVerification({
     super.key,
     required this.title,
     this.isverified = true,
@@ -45,7 +45,7 @@ class ProducttitlewithVerification extends StatelessWidget {
             ),
           ),
         2.widthBox,
-        Producttitle(
+        Shoptitle(
           title: title,
           isSemibold: isSemibold,
         ),

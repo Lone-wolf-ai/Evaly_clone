@@ -26,8 +26,8 @@ class ProductimgWithTag extends StatelessWidget {
                 RoundedImg(
                   isnetworkimg: isnetworkimg,
                   imgurl: imgurl,
-                  height: 180,
-                  width: 160,
+                  height: 200,
+                  width: 220,
                 ),
                 if (tag)
                   Positioned(
