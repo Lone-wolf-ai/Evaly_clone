@@ -8,8 +8,8 @@ import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CompleteProfileScreen extends StatelessWidget {
-  const CompleteProfileScreen({super.key});
-
+  const CompleteProfileScreen({super.key, this.isUpdate=false});
+  final bool isUpdate;
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(InfoPorvideController());
@@ -31,15 +31,16 @@ class CompleteProfileScreen extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar:(isUpdate)? AppBar():null,
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Form(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              60.heightBox,
+            if(!isUpdate)60.heightBox,
               //title
-              const TitleText(title: StringCons.ppyitoprocced),
+               TitleText(title:(!isUpdate)? StringCons.ppyitoprocced:"Edit Profile"),
               16.heightBox,
               //full name title
               StringCons.fullName.text.semiBold.gray500.make(),
@@ -103,7 +104,7 @@ class CompleteProfileScreen extends StatelessWidget {
               const SizedBox(height: 16.0),
               //complete button 
               CustomElevatedButton(
-                title: StringCons.completeProfile,
+                title:(!isUpdate)? StringCons.completeProfile:"Update",
                 onPressed: () {},
               ),
             ],

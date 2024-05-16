@@ -1,6 +1,9 @@
 import 'package:evaly/common/button/circulariconbutton.dart';
 import 'package:evaly/common/text/titletext.dart';
 import 'package:evaly/constant/imageconstant.dart';
+import 'package:evaly/feature/screens/auth/forgetscreen/forgetpassword.dart';
+import 'package:evaly/feature/screens/auth/profileinfo/profileinfo.dart';
+import 'package:evaly/feature/screens/shop/account/widget/orderlist/orderlist.dart';
 import 'package:evaly/feature/screens/shop/account/widget/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -69,7 +72,7 @@ class FourTitlesWithIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
       child: Column(
         children: [
           IconListTitle(
@@ -80,7 +83,7 @@ class FourTitlesWithIcons extends StatelessWidget {
           IconListTitle(
             title: "Wishlist",
             icon: Icons.favorite_border_outlined,
-            ontap: () =>Get.to(()=> const Wishlist()),
+            ontap: () => Get.to(() => const Wishlist()),
             color: Vx.red500,
           ),
           10.heightBox,
@@ -94,7 +97,7 @@ class FourTitlesWithIcons extends StatelessWidget {
           IconListTitle(
             icon: Icons.lock_outline,
             title: "Change Password",
-            ontap: () {},
+            ontap: () => Get.to(() => const ForgetPassword()),
             color: Vx.blue500,
           )
         ],
@@ -122,6 +125,7 @@ class IconListTitle extends StatelessWidget {
       leading: CustomIconButton(
         icon: icon,
         backgroundColor: color,
+        onPressed: () {},
       ),
       title: title.text.fontWeight(FontWeight.w400).make(),
     );
@@ -141,13 +145,13 @@ class FourButtonRow extends StatelessWidget {
         ButtonwithTitle(
             title: "Orders",
             color: Vx.green500,
-            onpressd: () {},
+            onpressd: ()=>Get.to(()=>const Orderlist()),
             icon: Icons.assignment),
         50.widthBox,
         ButtonwithTitle(
             title: "Profile",
             color: Vx.blue500,
-            onpressd: () {},
+            onpressd: () => Get.to(() => CompleteProfileScreen(isUpdate: true,)),
             icon: Icons.person),
         50.widthBox,
         ButtonwithTitle(
@@ -188,7 +192,7 @@ class ButtonwithTitle extends StatelessWidget {
           size: 24,
           iconcolor: color,
           icon: icon,
-          onPressed: onpressd,
+          onPressed:onpressd,
         ),
         title.text.gray500.sm.make()
       ],
@@ -224,12 +228,13 @@ class Profilewitheditbutton extends StatelessWidget {
       Positioned(
         top: 50,
         left: 100,
-        child: const CustomIconButton(
+        child: CustomIconButton(
           icon: Icons.edit,
           size: 18,
           minimumSize: Size(30, 30),
           backgroundColor: Vx.white,
           iconcolor: Vx.black,
+          onPressed: () {},
         ).box.shadow.roundedFull.make(),
       )
     ]);

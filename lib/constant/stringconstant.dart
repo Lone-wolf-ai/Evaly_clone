@@ -25,4 +25,5 @@ class StringCons {
   static const completeProfile = 'Complete Profile';
   static const male="Male";
   static const female="Female";
+  static const tabs=["ALL","PLACED","CONFIRMED","READY TO DISPATCH","DELIVERD","DISPATCHED","IN INSPECTION","RETURNS","CANELED"];
 }
