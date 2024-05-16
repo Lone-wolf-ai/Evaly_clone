@@ -7,13 +7,13 @@ class Suggandbutton extends StatelessWidget {
     required this.title,
     required this.buttontitle,
     required this.buttontitlecolor,
-    this.ontap,  this.titlecolor=Vx.gray500,
+   required this.ontap,  this.titlecolor=Vx.gray500,
   });
   final String title;
   final Color titlecolor;
   final String buttontitle;
   final Color buttontitlecolor;
-  final VoidCallback? ontap;
+  final VoidCallback ontap;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class Suggandbutton extends StatelessWidget {
             .color(buttontitlecolor)
             .extraBold
             .make()
-            .onTap(() => ontap)
+            .onTap(ontap)
       ],
     );
   }

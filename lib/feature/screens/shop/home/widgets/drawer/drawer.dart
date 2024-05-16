@@ -2,7 +2,7 @@ import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/feature/screens/shop/account/accountscreen.dart';
 import 'package:evaly/feature/screens/shop/cart/cartscreen.dart';
 import 'package:evaly/feature/screens/shop/home/homescreen.dart';
-import 'package:evaly/feature/screens/shop/home/widgets/customlisttitle.dart';
+import 'package:evaly/feature/screens/shop/home/widgets/drawer/widget/customlisttitle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';

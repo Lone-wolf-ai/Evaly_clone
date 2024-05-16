@@ -1,7 +1,7 @@
 import 'package:evaly/common/card/homepagecard.dart';
 import 'package:evaly/common/card/homepagecardlineargradiant.dart';
 import 'package:evaly/constant/colorconstant.dart';
-import 'package:evaly/feature/screens/shop/home/widgets/homebannercard.dart';
+import 'package:evaly/common/card/banner/homebannercard.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/homebuttons.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';

@@ -18,6 +18,7 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: "Account".text.size(24).bold.make(),
+      automaticallyImplyLeading: false,
         actions: [
           IconButton(
               onPressed: () {}, icon: const Icon(Icons.more_vert_rounded))

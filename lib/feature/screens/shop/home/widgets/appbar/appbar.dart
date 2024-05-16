@@ -1,4 +1,4 @@
-import 'package:evaly/feature/screens/shop/home/widgets/searchbar.dart';
+import 'package:evaly/feature/screens/shop/home/widgets/appbar/widget/searchbar.dart';
 import 'package:flutter/material.dart';
 
 

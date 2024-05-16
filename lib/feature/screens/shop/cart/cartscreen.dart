@@ -14,6 +14,7 @@ class ShoppingCart extends StatelessWidget {
     return Scaffold(
       backgroundColor: Vx.white,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Vx.white,
           title: const TitleText(
             title: 'Shopping Cart',

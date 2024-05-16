@@ -5,7 +5,10 @@ import 'package:evaly/common/textfield.dart/customtextfield.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/constant/stringconstant.dart';
 import 'package:evaly/feature/controller/auth/login/logincontroller.dart';
+import 'package:evaly/feature/screens/auth/forgetscreen/forgetpassword.dart';
 import 'package:evaly/feature/screens/auth/loginscreen/widgets/loginwidgets.dart';
+import 'package:evaly/feature/screens/auth/registerscreen/registerscreen.dart';
+import 'package:evaly/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -20,7 +23,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: (){},
           icon: const Icon(
             Icons.close_rounded,
           ),
@@ -61,12 +64,12 @@ class LoginScreen extends StatelessWidget {
                   ),
                   //2.heightBox,
                   TextButton(
-                      onPressed: () {},
+                      onPressed: ()=>Get.to(()=>const ForgetPassword()),
                       child: "Forget Password?".text.gray500.make()),
                   10.heightBox,
                   CustomElevatedButton(
                     title: 'Sign In',
-                    onPressed: () {},
+                    onPressed: ()=>Get.to(()=>const NavigationBarMenue()),
                   ),
                   8.heightBox,
                   "Or".text.gray500.semiBold.make().centered(),
@@ -83,7 +86,7 @@ class LoginScreen extends StatelessWidget {
                     buttontitlecolor: Vx.red600,
                     title: StringCons.dontacc,
                     buttontitle: StringCons.signup,
-                    ontap: (){},
+                    ontap: ()=>Get.to(()=>const RegisterScreen()),
                   )
                 ],
               ),

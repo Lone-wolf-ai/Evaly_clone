@@ -1,4 +1,4 @@
-import 'package:evaly/feature/screens/shop/home/widgets/companycardlist.dart';
+import 'package:evaly/common/card/list/companycardlist.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/titlesubtitlesubtitlebutton.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
