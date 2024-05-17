@@ -20,20 +20,20 @@ class HomeScreen extends StatelessWidget {
       appBar: homeAppBar(),
       drawer:const MyDrawer(userName: "Joy", userEmail: "TanjimJOy7@gmail.com") ,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const BannerCarousel(imagePaths:[
-              ImageCons.banner1,
-              ImageCons.banner1,
-              ImageCons.banner1
-            ]).paddingSymmetric(horizontal: 10),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Part1(),
-            ),
-            10.heightBox,
-            const Part2(),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            children: [
+              const BannerCarousel(imagePaths:[
+                ImageCons.banner1,
+                ImageCons.banner1,
+                ImageCons.banner1
+              ]),
+              const Part1(),
+              10.heightBox,
+              const Part2(),
+            ],
+          ),
         ),
       ),
     );
