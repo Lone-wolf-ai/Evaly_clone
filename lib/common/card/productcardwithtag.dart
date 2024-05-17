@@ -2,7 +2,9 @@ import 'package:evaly/common/card/cardlogobanner.dart';
 import 'package:evaly/common/card/widget/productprice.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/image/productimgwithtag.dart';
+import 'package:evaly/feature/screens/shop/productdetail/productdetailsscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ProductCardWithTag extends StatelessWidget {
@@ -54,6 +56,6 @@ class ProductCardWithTag extends StatelessWidget {
           const SizedBox(height: 5.0), // Adjust spacing as needed
         ],
       ),
-    );
+    ).onTap(()=>Get.to(()=>const ProductDetails()));
   }
 }

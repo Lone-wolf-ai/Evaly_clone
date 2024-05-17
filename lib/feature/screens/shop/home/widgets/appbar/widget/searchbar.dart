@@ -4,8 +4,9 @@ import 'package:get/get.dart';
 class RoundedSearchBar extends StatelessWidget {
   const RoundedSearchBar({
     super.key,
+     this.title="Search here.....",
   });
-
+  final String title;
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SearchController());
@@ -29,10 +30,10 @@ class RoundedSearchBar extends StatelessWidget {
           Expanded(
             child: TextField(
               controller: controller.textController,
-              decoration: const InputDecoration(
-                  hintText: 'Search...',
+              decoration:  InputDecoration(
+                  hintText: title,
                   border: InputBorder.none,
-                  contentPadding: EdgeInsets.only(bottom: 10)),
+                  contentPadding: const EdgeInsets.only(bottom: 10)),
               onSubmitted: (text) => controller.search(text),
             ),
           ),

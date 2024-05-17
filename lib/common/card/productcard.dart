@@ -3,7 +3,9 @@ import 'package:evaly/common/card/widget/productprice.dart';
 import 'package:evaly/common/card/widget/productsubtitle.dart';
 import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
+import 'package:evaly/feature/screens/shop/productdetail/productdetailsscreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ProductCard extends StatelessWidget {
@@ -81,6 +83,6 @@ class ProductCard extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ).onTap(()=>Get.to(()=>const ProductDetails()));
   }
 }

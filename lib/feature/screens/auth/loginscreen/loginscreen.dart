@@ -8,6 +8,7 @@ import 'package:evaly/feature/controller/auth/login/logincontroller.dart';
 import 'package:evaly/feature/screens/auth/forgetscreen/forgetpassword.dart';
 import 'package:evaly/feature/screens/auth/loginscreen/widgets/loginwidgets.dart';
 import 'package:evaly/feature/screens/auth/registerscreen/registerscreen.dart';
+import 'package:evaly/feature/screens/shop/home/homescreen.dart';
 import 'package:evaly/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -69,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                   10.heightBox,
                   CustomElevatedButton(
                     title: 'Sign In',
-                    onPressed: ()=>Get.to(()=>const NavigationBarMenue()),
+                    onPressed: ()=>Get.to(()=>const HomeScreen()),
                   ),
                   8.heightBox,
                   "Or".text.gray500.semiBold.make().centered(),

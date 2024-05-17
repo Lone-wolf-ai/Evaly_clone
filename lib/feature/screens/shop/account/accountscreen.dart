@@ -5,6 +5,7 @@ import 'package:evaly/feature/screens/auth/forgetscreen/forgetpassword.dart';
 import 'package:evaly/feature/screens/auth/profileinfo/profileinfo.dart';
 import 'package:evaly/feature/screens/shop/account/widget/orderlist/orderlist.dart';
 import 'package:evaly/feature/screens/shop/account/widget/wishlist.dart';
+import 'package:evaly/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -16,6 +17,7 @@ class AccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Color> linercolors = [Vx.white, Vx.gray400];
     return Scaffold(
+      bottomNavigationBar: BottomNav(),
       appBar: AppBar(
         title: "Account".text.size(24).bold.make(),
       automaticallyImplyLeading: false,

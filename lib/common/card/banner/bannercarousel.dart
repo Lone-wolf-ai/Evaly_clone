@@ -1,13 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class BannerCarousel extends StatefulWidget {
   final List<String> imagePaths;
   final double borderRadius;
-
+  final double height;
   const BannerCarousel(
-      {super.key, required this.imagePaths, this.borderRadius = 12.0});
+      {super.key,
+      required this.imagePaths,
+      this.borderRadius = 12.0,
+       this.height=120});
 
   @override
   State<BannerCarousel> createState() => _BannerCarouselState();
@@ -21,7 +23,7 @@ class _BannerCarouselState extends State<BannerCarousel> {
     return Stack(
       children: [
         SizedBox(
-          height: 120,
+          height: widget.height,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(widget.borderRadius),
             child: PageView.builder(

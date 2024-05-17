@@ -1,5 +1,9 @@
 import 'package:evaly/feature/screens/shop/account/accountscreen.dart';
+import 'package:evaly/feature/screens/shop/account/widget/orderlist/orderlist.dart';
+import 'package:evaly/feature/screens/shop/account/widget/wishlist.dart';
+import 'package:evaly/feature/screens/shop/home/categories/categories.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeFiveButton extends StatelessWidget {
@@ -22,7 +26,7 @@ class HomeFiveButton extends StatelessWidget {
         ButtonwithTitle(
             title: 'Wish List',
             color: Vx.red600,
-            onpressd: () {},
+            onpressd: ()=>Get.to(()=>const Wishlist()),
             icon: Icons.favorite_border_rounded),
         
         ButtonwithTitle(
@@ -34,13 +38,13 @@ class HomeFiveButton extends StatelessWidget {
         ButtonwithTitle(
             title: 'Categories',
             color: Vx.sky500,
-            onpressd: () {},
+            onpressd: ()=>Get.to(()=>const CategoryScreen()),
             icon: Icons.category_outlined),
         
         ButtonwithTitle(
             title: 'Orders',
             color: Vx.amber500,
-            onpressd: () {},
+            onpressd: ()=>Get.to(()=>const Orderlist()),
             icon: Icons.document_scanner_rounded),
         
       ],

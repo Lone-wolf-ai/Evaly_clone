@@ -1,6 +1,7 @@
 import 'package:evaly/common/text/titletext.dart';
 import 'package:evaly/constant/imageconstant.dart';
 import 'package:evaly/feature/screens/shop/cart/widget/bottomtitle.dart';
+import 'package:evaly/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -12,6 +13,7 @@ class ShoppingCart extends StatelessWidget {
     const int items = 0;
     final w = MediaQuery.of(context).size.width;
     return Scaffold(
+      bottomNavigationBar: BottomNav(),
       backgroundColor: Vx.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,
