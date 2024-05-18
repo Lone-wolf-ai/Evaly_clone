@@ -96,7 +96,7 @@ class CardLogoBaner extends StatelessWidget {
               ),
             )
           ],
-        ).box.height(260).white.roundedSM.make(),
+        ).box.height(260).white.border(width: 0.2).roundedSM.make(),
       ],
     );
   }

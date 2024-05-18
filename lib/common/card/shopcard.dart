@@ -2,7 +2,10 @@ import 'package:evaly/common/card/widget/productsubtitle.dart';
 import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/card/widget/shoptitlewithverification.dart';
+import 'package:evaly/feature/screens/shop/productdetail/productdetailsscreen.dart';
+import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class ShopCard extends StatelessWidget {
@@ -42,11 +45,23 @@ class ShopCard extends StatelessWidget {
             isverified: isverified,
             isSemibold: false,
           ),
-       if(subtitle!='') ProductSubtitle(title: subtitle),
-       if(subtitle!='') 5.heightBox,
-       if(subtitle=='')Spacer(),
-        RatingwithTotalrates(rate: rate, totalrated: totalrated,itemsize: 12,)
+        if (subtitle != '') ProductSubtitle(title: subtitle),
+        if (subtitle != '') 5.heightBox,
+        if (subtitle == '') Spacer(),
+        RatingwithTotalrates(
+          rate: rate,
+          totalrated: totalrated,
+          itemsize: 12,
+        )
       ],
-    ).centered().box.width(110).roundedSM.color(Vx.white).p4.make();
+    )
+        .centered()
+        .box
+        .width(110)
+        .roundedSM
+        .color(Vx.white)
+        .p4
+        .make()
+        .onTap(() => Get.to(() =>const ShopDetails()));
   }
 }
