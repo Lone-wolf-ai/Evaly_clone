@@ -13,7 +13,7 @@ class ProductCardWithTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.0, // Adjust width as needed
+      width: 220.0, // Adjust width as needed
       height: 400.0, // Adjust height as needed
       decoration: BoxDecoration(
         color: Vx.white,
@@ -22,12 +22,18 @@ class ProductCardWithTag extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ProductimgWithTag(),
+          const ProductimgWithTag(
+            height: 200,
+            width: 220,
+          ),
           const SizedBox(height: 5.0), // Adjust spacing as needed
-          const MultilineTitlewithverification(
-            title: 'hello its me',
-            size: 14.0,
-            isboled: false,
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: MultilineTitlewithverification(
+              title: 'hello its me',
+              size: 14.0,
+              isboled: false,
+            ),
           ),
           const SizedBox(height: 10.0), // Adjust spacing as needed
           const Padding(
@@ -56,6 +62,6 @@ class ProductCardWithTag extends StatelessWidget {
           const SizedBox(height: 5.0), // Adjust spacing as needed
         ],
       ),
-    ).onTap(()=>Get.to(()=>const ProductDetails()));
+    ).onTap(() => Get.to(() => const ProductDetails()));
   }
 }

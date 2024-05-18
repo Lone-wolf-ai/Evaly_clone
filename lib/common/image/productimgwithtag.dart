@@ -10,35 +10,35 @@ class ProductimgWithTag extends StatelessWidget {
     this.imgurl = ImageCons.watch1,
     this.tag = true,
     this.itemsold = '10',
+    this.height = 200,
+    this.width = 220,
   });
+
   final bool isnetworkimg;
   final String imgurl;
   final bool tag;
   final String itemsold;
+  final double height;
+  final double width;
+
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Stack(
       children: [
-        Column(
-          children: [
-            Stack(
-              children: [
-                RoundedImg(
-                  isnetworkimg: isnetworkimg,
-                  imgurl: imgurl,
-                  height: 200,
-                  width: 220,
-                ),
-                if (tag)
-                  Positioned(
-                      right: BorderSide.strokeAlignInside,
-                      child: ProductTag(
-                        tag: '$itemsold sold',
-                      ))
-              ],
-            )
-          ],
-        )
+        RoundedImg(
+          isnetworkimg: isnetworkimg,
+          imgurl: imgurl,
+          height: height,
+          width: width,
+        ),
+        if (tag)
+          Positioned(
+            top: 0,
+            right: 0,
+            child: ProductTag(
+              tag: '$itemsold sold',
+            ),
+          ),
       ],
     );
   }
