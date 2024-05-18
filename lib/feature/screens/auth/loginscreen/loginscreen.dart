@@ -9,7 +9,7 @@ import 'package:evaly/feature/screens/auth/forgetscreen/forgetpassword.dart';
 import 'package:evaly/feature/screens/auth/loginscreen/widgets/loginwidgets.dart';
 import 'package:evaly/feature/screens/auth/registerscreen/registerscreen.dart';
 import 'package:evaly/feature/screens/shop/home/homescreen.dart';
-import 'package:evaly/navigation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';

@@ -1,4 +1,3 @@
-import 'package:evaly/feature/screens/shop/home/homescreen.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/roundedcolorbox.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';

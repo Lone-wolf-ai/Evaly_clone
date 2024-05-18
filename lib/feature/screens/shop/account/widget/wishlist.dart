@@ -1,9 +1,5 @@
-import 'package:evaly/common/card/widget/productprice.dart';
-import 'package:evaly/common/card/widget/producttitle.dart';
 import 'package:evaly/constant/imageconstant.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Wishlist extends StatelessWidget {

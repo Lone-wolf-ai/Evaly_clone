@@ -78,6 +78,7 @@ class ProductCard extends StatelessWidget {
                 (applyrating)
                     ? const RatingwithTotalrates(rate: 4, totalrated: "20k",itemsize: 10,)
                     : ProductAbleabilty(amount: amount),
+                4.heightBox
               ],
             ),
           ),

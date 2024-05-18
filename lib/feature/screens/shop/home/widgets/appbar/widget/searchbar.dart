@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -49,7 +50,9 @@ class SearchController extends GetxController {
 
   void search(String text) {
     // Your search logic here
-    print('Searching for: $text');
+    if (kDebugMode) {
+      print('Searching for: $text');
+    }
     textController.clear(); // Clear search text after submission
   }
 }

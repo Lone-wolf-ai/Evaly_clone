@@ -13,7 +13,7 @@ class ShoppingCart extends StatelessWidget {
     const int items = 0;
     final w = MediaQuery.of(context).size.width;
     return Scaffold(
-      bottomNavigationBar: BottomNav(),
+      bottomNavigationBar: const BottomNav(),
       backgroundColor: Vx.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,

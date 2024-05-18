@@ -1,4 +1,3 @@
-import 'package:evaly/feature/screens/shop/account/widget/orderlist/orderlist.dart';
 import 'package:evaly/feature/screens/shop/account/widget/orderlist/widgets/orderstatus.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';

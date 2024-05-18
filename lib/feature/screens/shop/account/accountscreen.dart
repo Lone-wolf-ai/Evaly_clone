@@ -15,9 +15,8 @@ class AccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Color> linercolors = [Vx.white, Vx.gray400];
     return Scaffold(
-      bottomNavigationBar: BottomNav(),
+      bottomNavigationBar: const BottomNav(),
       appBar: AppBar(
         title: "Account".text.size(24).bold.make(),
       automaticallyImplyLeading: false,
@@ -154,7 +153,7 @@ class FourButtonRow extends StatelessWidget {
         ButtonwithTitle(
             title: "Profile",
             color: Vx.blue500,
-            onpressd: () => Get.to(() => CompleteProfileScreen(isUpdate: true,)),
+            onpressd: () => Get.to(() => const CompleteProfileScreen(isUpdate: true,)),
             icon: Icons.person),
         50.widthBox,
         ButtonwithTitle(
@@ -234,7 +233,7 @@ class Profilewitheditbutton extends StatelessWidget {
         child: CustomIconButton(
           icon: Icons.edit,
           size: 18,
-          minimumSize: Size(30, 30),
+          minimumSize: const Size(30, 30),
           backgroundColor: Vx.white,
           iconcolor: Vx.black,
           onPressed: () {},

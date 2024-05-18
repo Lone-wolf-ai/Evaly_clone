@@ -1,10 +1,7 @@
 import 'package:evaly/common/card/widget/productsubtitle.dart';
-import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/card/widget/shoptitlewithverification.dart';
-import 'package:evaly/feature/screens/shop/productdetail/productdetailsscreen.dart';
 import 'package:evaly/feature/screens/shop/shopdetatils/shopdetailsscreen.dart';
-import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -48,7 +45,7 @@ class ShopCard extends StatelessWidget {
           ),
         if (subtitle != '') ProductSubtitle(title: subtitle),
         if (subtitle != '') 5.heightBox,
-        if (subtitle == '') Spacer(),
+        if (subtitle == '') const Spacer(),
         RatingwithTotalrates(
           rate: rate,
           totalrated: totalrated,
