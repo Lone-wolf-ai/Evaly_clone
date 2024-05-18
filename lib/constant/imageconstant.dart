@@ -5,4 +5,5 @@ class ImageCons {
   static const person = "assets/image/person1.png";
   static const banner1 = "assets/image/banner2.jpg";
   static const cart = 'assets/image/cart.png';
+  static const sort="assets/image/sort.png";
 }

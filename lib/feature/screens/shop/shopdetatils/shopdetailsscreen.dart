@@ -1,7 +1,7 @@
-import 'package:evaly/common/button/circulariconbutton.dart';
 import 'package:evaly/common/card/cardlogobanner.dart';
 import 'package:evaly/common/card/productcardwithtag.dart';
 import 'package:evaly/feature/screens/shop/home/widgets/appbar/widget/searchbar.dart';
+import 'package:evaly/feature/screens/shop/shopdetatils/widget/header.dart';
 import 'package:evaly/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +13,7 @@ class ShopDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final w=MediaQuery.of(context).size.width;
+    final w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Vx.gray100,
       bottomNavigationBar: const BottomNav(),
@@ -25,27 +25,14 @@ class ShopDetails extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CardLogoBaner(title: "hello").paddingSymmetric(horizontal: 10),
+            const CardLogoBaner(title: "hello")
+                .paddingSymmetric(horizontal: 10),
             Row(
               children: [
                 SizedBox(
                   width: w,
                   child: StickyHeader(
-                      header: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        
-                        children: [
-                          "Products".text.bold.size(18).make().paddingSymmetric(horizontal: 10),
-                          const Spacer(),
-                          CustomIconButton(
-                            
-                            icon: Icons.filter_alt,
-                            onPressed: () {},
-                            iconcolor: Vx.black,
-                            backgroundColor: Vx.white,
-                          ).paddingSymmetric(horizontal: 10)
-                        ],
-                      ).box.gray100.make(),
+                      header: CustomHeader(sort: () {  }, filter: () {  },),
                       content: GridView.builder(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
@@ -70,3 +57,7 @@ class ShopDetails extends StatelessWidget {
     );
   }
 }
+
+
+
+

@@ -65,8 +65,8 @@ class MyDrawer extends StatelessWidget {
                 icon: Icons.home_outlined,
                 ontap: () {
                   if (controller.selectedIndex.value != 0) {
-                    scaffoldKey.currentState?.closeDrawer();
                     Get.offAll(() => const HomeScreen());
+                    scaffoldKey.currentState?.closeDrawer();
                   }
                 }),
             CustomListTitle(
@@ -74,7 +74,7 @@ class MyDrawer extends StatelessWidget {
                 icon: Icons.person_outline,
                 ontap: () {
                   controller.selectedIndex.value = 3;
-                  controller.navigateTo(controller.selectedIndex.value);
+                  Get.to(() => const AccountScreen());
                   scaffoldKey.currentState?.closeDrawer();
                 }),
             CustomListTitle(
@@ -82,20 +82,20 @@ class MyDrawer extends StatelessWidget {
                 icon: Icons.request_page_outlined,
                 ontap: () {
                   Get.to(() => const Orderlist());
-                   scaffoldKey.currentState?.closeDrawer();
+                  scaffoldKey.currentState?.closeDrawer();
                 }),
             CustomListTitle(
                 title: 'Cart',
                 icon: Icons.shopping_cart_outlined,
                 ontap: () {
                   controller.selectedIndex.value = 2;
-                  controller.navigateTo(controller.selectedIndex.value);
+                  Get.to(() => const ShoppingCart());
                   scaffoldKey.currentState?.closeDrawer();
                 }),
             CustomListTitle(
                 title: 'Wishlist',
                 icon: Icons.favorite_border_outlined,
-                ontap: ()=>Get.to(()=>const Wishlist())),
+                ontap: () => Get.to(() => const Wishlist())),
             CustomListTitle(
                 title: 'My eStore', icon: Icons.store, ontap: () {}),
             CustomListTitle(

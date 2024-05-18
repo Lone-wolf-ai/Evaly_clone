@@ -3,6 +3,7 @@ import 'package:evaly/common/card/widget/producttitlewithverifiacation.dart';
 import 'package:evaly/common/card/widget/ratingwithtotalrated.dart';
 import 'package:evaly/common/card/widget/shoptitlewithverification.dart';
 import 'package:evaly/feature/screens/shop/productdetail/productdetailsscreen.dart';
+import 'package:evaly/feature/screens/shop/shopdetatils/shopdetailsscreen.dart';
 import 'package:evaly/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
